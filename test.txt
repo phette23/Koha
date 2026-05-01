@@ -1,0 +1,1 @@
+Testing auto-closing PRs with gh workflows.
