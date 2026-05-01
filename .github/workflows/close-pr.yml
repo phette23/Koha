@@ -4,13 +4,9 @@ on:
     types: [opened, reopened]
 jobs:
   run:
+    if: github.repository == 'Koha-Community/Koha'
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v4
-        with:
-          sparse-checkout: "README.txt"
-          sparse-checkout-cone-mode: false
       - name: close
         env:
           GH_TOKEN: ${{ github.token }}
